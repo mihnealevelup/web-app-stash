@@ -1,2 +1,2 @@
 # web-app-stash
-University Project
+University Project - Faculty of Mathemathics and Informatics

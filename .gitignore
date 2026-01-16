@@ -1,0 +1,28 @@
+.gitignore
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Ignore server statistics and logs
+*/awstats/
+*/stats/
+*/logs/
+error_log
+access_log
+
+# Ignore server configuration trash
+.ftpquota
+
+# Ignore IDE settings (Optional, but recommended)
+.idea/
+
+# Ignore the symmlinked, user-facing, public_html
+mgrigoriu.daw.ssmr.ro/private_html

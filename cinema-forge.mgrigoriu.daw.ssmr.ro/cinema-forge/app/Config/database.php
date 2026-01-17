@@ -1,9 +1,8 @@
 
 <?php
-// app/Helpers/TableGenerator.php
 
 class TableGenerator {
-    public static function render($data, $columns, $actions=[]) {
+    public static function render($data, $columns, $actions) {
         if (empty($data)) return '<div class="alert alert-info">No records found.</div>';
 
         $html = '<table class="table table-striped table-hover">';

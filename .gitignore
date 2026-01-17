@@ -24,5 +24,6 @@ access_log
 # Ignore IDE settings (Optional, but recommended)
 .idea/
 
-# Ignore the symmlinked, user-facing, public_html
+# Ignore the symmlinks
 mgrigoriu.daw.ssmr.ro/private_html
+mgrigoriu.daw.ssmr.ro/public_html/cinema

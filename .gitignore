@@ -10,6 +10,7 @@ Thumbs.db
 
 # Log files
 *.log
+*
 
 # Ignore server statistics and logs
 */awstats/
@@ -18,12 +19,16 @@ Thumbs.db
 error_log
 access_log
 
-# Ignore server configuration trash
+# Ignore server config trash
 .ftpquota
 
-# Ignore IDE settings (Optional, but recommended)
+# Ignore IDE settings
 .idea/
+.output.txt
 
 # Ignore the symmlinks
 mgrigoriu.daw.ssmr.ro/private_html
 mgrigoriu.daw.ssmr.ro/public_html/cinema
+
+# Ignore files with sensitive data
+cinema-forge.mgrigoriu.daw.ssmr.ro/cinema-forge/app/Config/config.php

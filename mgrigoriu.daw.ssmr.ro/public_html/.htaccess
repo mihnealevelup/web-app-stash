@@ -1,0 +1,14 @@
+# Main routing rules for the main domain
+Options -MultiViews -Indexes
+RewriteEngine On
+
+# remove "www" if it exists
+RewriteCond %{HTTP_HOST} ^www\.mgrigoriu\.daw\.ssmr\.ro$ [NC]
+RewriteRule ^(.*)$ http://mgrigoriu.daw.ssmr.ro/$1 [R=301,L]
+
+# Allow access to files/directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# MVC routing for the principal domain.
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]

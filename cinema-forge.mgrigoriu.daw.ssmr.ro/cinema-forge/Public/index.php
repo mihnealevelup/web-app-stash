@@ -20,7 +20,7 @@ spl_autoload_register(function ($class) {
     if (file_exists($file)) {
         require $file;
     }
-});
+});     // now Database.php can use DB_HOST, DB_USER, etc.
 
 // Start session
 session_start();

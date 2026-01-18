@@ -32,3 +32,4 @@ mgrigoriu.daw.ssmr.ro/public_html/cinema
 
 # Ignore files with sensitive data
 cinema-forge.mgrigoriu.daw.ssmr.ro/cinema-forge/app/Config/config.php
+cinema-forge.mgrigoriu.daw.ssmr.ro/cinema-forge/app/Core/Database.php

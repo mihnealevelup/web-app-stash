@@ -27,7 +27,7 @@ session_start();
 
 // Validate URL input (use Security class)
 $url = $_GET['url'] ?? '/';
-if (!Helpers\Security::validateUrl($url)) {
+if (!Helpers\CSRF::validateUrl($url)) {
     http_response_code(400);
     die('Invalid request');
 }

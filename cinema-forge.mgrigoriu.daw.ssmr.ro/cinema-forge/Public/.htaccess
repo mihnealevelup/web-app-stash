@@ -1,1 +1,25 @@
-# reguli de rescriere URL
+# reguli de rescriere
+
+# activam rescrierea URL
+RewriteEngine On
+
+# setam dir de baza
+RewriteBase /
+
+# redirect catre index.php if the file/directory doesn't exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+# prevenim accesul direct la fisiere sensibile
+<FilesMatch "\.(env|ini|log|sh|sql)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# headere de securitate
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>

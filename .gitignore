@@ -16,8 +16,11 @@ Thumbs.db
 */awstats/
 */stats/
 */logs/
+mgrigoriu.daw.ssmr.ro/logs
 error_log
 access_log
+cinema-forge.mgrigoriu.daw.ssmr.ro/cinema-forge/app/Views/admin/reports
+
 
 # Ignore server config trash
 .ftpquota

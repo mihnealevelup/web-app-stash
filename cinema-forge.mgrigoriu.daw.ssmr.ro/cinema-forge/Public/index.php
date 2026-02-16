@@ -36,9 +36,6 @@ if (!Helpers\CSRF::validateUrl($url)) {
 }
 
 // Definim rutele
-// $router->get('/catalog', 'Frontend/CatalogController@index');
-// $router->get('/film/:id', 'Frontend/ShowcaseController@show');
-
 // =====================
 // Frontend routes (public, no login)
 // =====================

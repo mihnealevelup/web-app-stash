@@ -10,7 +10,7 @@ class TableGenerator {
         $html = '<table class="table table-striped table-hover">';
         $html.= '<thead class="table-dark"><tr>';
 
-        // generate header
+        // generare header
         foreach ($columns as $dbField => $label) {
             $html.= '<th>'. htmlspecialchars($label). '</th>';
         }
@@ -18,7 +18,7 @@ class TableGenerator {
 
         $html.= '</tr></thead><tbody>';
 
-        // generate rows
+        // generare randuri
         foreach ($data as $row) {
             $html.= '<tr>';
             foreach ($columns as $dbField => $label) {
@@ -27,7 +27,7 @@ class TableGenerator {
                 $html.= "<td>{$value}</td>";
             }
 
-            // generate action buttons
+            // generare butoane de actiune
             if (!empty($actions)) {
                 $html.= '<td>';
                 foreach ($actions as $action) {
@@ -83,7 +83,7 @@ class TableGenerator {
         return $html;
     }
 
-    // Filter form generator
+    // generare Filter form
     public static function renderFilters($filters, $action = '') {
         $html = '<form method="GET" action="' . htmlspecialchars($action) . '" class="row g-3 mb-4">';
 

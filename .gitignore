@@ -1,38 +1,41 @@
 .gitignore
-# Temporary files
+
+# temporary files
 *.tmp
 *.bak
 *~
 
-# OS generated files
+# os generated files
 .DS_Store
 Thumbs.db
 
-# Log files
+# log files
 *.log
-*
 
-# Ignore server statistics and logs
+# server statistics and logs
 */awstats/
 */stats/
 */logs/
 mgrigoriu.daw.ssmr.ro/logs
 error_log
 access_log
-cinema-forge.mgrigoriu.daw.ssmr.ro/cinema-forge/app/Views/admin/reports
 
+# generated reports and cache
+cinema-forge.mgrigoriu.daw.ssmr.ro/cinema-forge/app/storage/
 
-# Ignore server config trash
+# server config trash
 .ftpquota
 
-# Ignore IDE settings
+# ide settings
 .idea/
 .output.txt
 
-# Ignore the symmlinks
+# the symlinks
 mgrigoriu.daw.ssmr.ro/private_html
 mgrigoriu.daw.ssmr.ro/public_html/cinema
 
-# Ignore files with sensitive data
+# files with sensitive data
 cinema-forge.mgrigoriu.daw.ssmr.ro/cinema-forge/app/Config/config.php
-cinema-forge.mgrigoriu.daw.ssmr.ro/cinema-forge/app/Core/Database.php
+
+# composer dependencies
+cinema-forge.mgrigoriu.daw.ssmr.ro/cinema-forge/vendor/

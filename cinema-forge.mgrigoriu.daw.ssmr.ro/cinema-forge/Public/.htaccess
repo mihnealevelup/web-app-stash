@@ -1,4 +1,11 @@
 RewriteEngine On
+
+# this docroot is reached both through the cinema-forge subdomain and through the
+# /cinema symlink on the main domain; the application builds absolute links, so any
+# request arriving on another host is sent to the canonical subdomain first
+RewriteCond %{HTTP_HOST} !^cinema-forge\.mgrigoriu\.daw\.ssmr\.ro$ [NC]
+RewriteRule ^(.*)$ https://cinema-forge.mgrigoriu.daw.ssmr.ro/$1 [R=301,L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]

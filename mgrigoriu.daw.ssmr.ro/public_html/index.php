@@ -55,7 +55,7 @@
         <h3 style="border-bottom: 1px solid #444; padding-bottom: 10px;">Projects</h3>
         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
             <span><span class="status-dot"></span> Cinema-Forge</span>
-            <a href="/cinema" class="btn">Check it out</a>
+            <a href="https://cinema-forge.mgrigoriu.daw.ssmr.ro/" class="btn">Check it out</a>
         </div>
         <p style="font-size: 0.85rem; margin-top: 5px;">Platform for a movie production studio (WIP).</p>
     </div>

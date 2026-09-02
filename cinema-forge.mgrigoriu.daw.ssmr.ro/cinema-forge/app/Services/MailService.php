@@ -4,7 +4,7 @@ namespace Services;
 
 class MailService {
 
-    const RECIPIENT = 'office@cinema-forge.mgrigoriu.daw.ssmr.ro';
+    const RECIPIENT = 'kenny@mgrigoriu.daw.ssmr.ro';
 
     public static function sendContactMessage($name, $email, $subject, $message) {
         $subjectLine = $subject !== ''
@@ -26,7 +26,7 @@ class MailService {
         $headers = [
             'MIME-Version: 1.0',
             'Content-Type: text/plain; charset=UTF-8',
-            'From: Cinema Forge <no-reply@cinema-forge.mgrigoriu.daw.ssmr.ro>',
+            'From: Cinema Forge <no-reply@mgrigoriu.daw.ssmr.ro>',
             'Reply-To: ' . $safeName . ' <' . $safeEmail . '>',
             'X-Mailer: PHP/' . phpversion()
         ];

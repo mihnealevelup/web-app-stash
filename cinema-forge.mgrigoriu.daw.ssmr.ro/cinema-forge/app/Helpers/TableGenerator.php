@@ -4,7 +4,7 @@ namespace Helpers;
 class TableGenerator {
 
     // table method for admin
-    public static function render($data, $columns, $actions) {
+    public static function render($data, $columns, $actions, $csrfToken = null) {
         if (empty($data)) return '<div class="alert alert-info">No records found.</div>';
 
         $html = '<table class="table table-striped table-hover">';
@@ -34,7 +34,18 @@ class TableGenerator {
                     $url = str_replace(':id', $row['id'], $action['url']);
                     $class = $action['class']?? 'btn-secondary';
                     $label = $action['label'];
-                    $html.= "<a href='{$url}' class='btn btn-sm {$class} me-1'>{$label}</a>";
+
+                    // actiunile distructive pleaca prin POST, cu token csrf
+                    if (strtolower($action['method']?? 'get') === 'post') {
+                        $confirm = $action['confirm']?? 'Are you sure?';
+                        $html.= "<form method='POST' action='{$url}' class='d-inline'"
+                            . " onsubmit=\"return confirm('". htmlspecialchars($confirm, ENT_QUOTES). "')\">";
+                        $html.= "<input type='hidden' name='csrf_token' value='". htmlspecialchars((string) $csrfToken, ENT_QUOTES). "'>";
+                        $html.= "<button type='submit' class='btn btn-sm {$class} me-1'>{$label}</button>";
+                        $html.= '</form>';
+                    } else {
+                        $html.= "<a href='{$url}' class='btn btn-sm {$class} me-1'>{$label}</a>";
+                    }
                 }
                 $html.= '</td>';
             }

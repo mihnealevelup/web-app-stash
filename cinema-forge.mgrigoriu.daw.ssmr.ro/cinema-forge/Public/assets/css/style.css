@@ -1,0 +1,112 @@
+/* cinema forge - custom layer on top of bootstrap */
+
+:root {
+    --cf-ink: #12141a;
+    --cf-muted: #6b7280;
+    --cf-accent: #c1440e;
+    --cf-surface: #f7f7f5;
+}
+
+body {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--cf-ink);
+    background-color: #fff;
+}
+
+/* navigation */
+.navbar-brand .brand-mark {
+    color: var(--cf-accent);
+    font-size: .7rem;
+    vertical-align: middle;
+}
+
+.navbar-dark .nav-link {
+    letter-spacing: .01em;
+}
+
+.navbar-dark .nav-link:hover {
+    color: #fff;
+}
+
+/* hero band on the catalogue */
+.hero {
+    background: linear-gradient(180deg, var(--cf-surface) 0%, #fff 100%);
+}
+
+.tracking-wide {
+    letter-spacing: .12em;
+}
+
+/* film cards in the catalogue grid */
+.card-img-top {
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    background-color: #e9ecef;
+}
+
+.card {
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 .6rem 1.4rem rgba(18, 20, 26, .12) !important;
+}
+
+/* round portraits on the film page */
+.talent-photo {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    background-color: #e9ecef;
+}
+
+/* honeypot: hidden from people, visible to naive bots */
+.honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* admin area */
+.admin-body {
+    background-color: var(--cf-surface);
+}
+
+.admin-nav .nav-link {
+    color: rgba(255, 255, 255, .65);
+    border-radius: .35rem;
+    padding: .5rem .85rem;
+    margin-bottom: .15rem;
+}
+
+.admin-nav .nav-link:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .08);
+}
+
+.admin-nav .nav-link.active {
+    color: #fff;
+    background-color: var(--cf-accent);
+}
+
+.stat-card:hover {
+    transform: none;
+}
+
+.stat-card .display-6 {
+    color: var(--cf-ink);
+}
+
+/* keep wide admin tables readable on small screens */
+.table-responsive table {
+    min-width: 640px;
+}
+
+@media print {
+    .navbar, footer, .btn, aside {
+        display: none !important;
+    }
+}

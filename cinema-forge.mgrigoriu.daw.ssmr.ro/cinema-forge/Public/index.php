@@ -75,5 +75,11 @@ $router->get('/admin/talents/edit/:id', 'TalentManagerController@edit');
 $router->post('/admin/talents/update/:id', 'TalentManagerController@update');
 $router->post('/admin/talents/delete/:id', 'TalentManagerController@delete');
 
+// Reports (admin + manager)
+$router->get('/admin/reports', 'ReportController@index');
+$router->get('/admin/reports/films.xls', 'ReportController@filmsExcel');
+$router->get('/admin/reports/films.csv', 'ReportController@filmsCsv');
+$router->get('/admin/reports/talents.xls', 'ReportController@talentsExcel');
+
 // Dispatch
 $router->dispatch($_GET['url'] ?? '/');

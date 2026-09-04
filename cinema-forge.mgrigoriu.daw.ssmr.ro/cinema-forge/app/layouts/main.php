@@ -16,6 +16,11 @@ $metaDescription = $metaDescription ?? 'Cinema Forge is an independent film prod
     <meta property="og:description" content="<?= htmlspecialchars($metaDescription) ?>">
     <meta property="og:type" content="website">
     <link rel="canonical" href="<?= htmlspecialchars(APP_URL . ($_SERVER['REQUEST_URI'] ?? '/')) ?>">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
